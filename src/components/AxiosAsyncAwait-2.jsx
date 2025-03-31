@@ -23,7 +23,7 @@ export function AxiosAsyncAwait2() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-gray-100 p-6">
+    <div className="min-h-screen w-full bg-gray-100">
       <h1 className="text-2xl font-bold mb-4 text-center">Cat Fact</h1>
 
       {loading && <p className="text-center">Loading...</p>}
