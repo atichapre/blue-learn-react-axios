@@ -45,24 +45,31 @@ export function Thailand() {
 
   return (
     <div className="min-h-screen w-full p-6 bg-amber-100">
-      <h1 className="text-3xl font-bold mb-4 text-center">{nameOfCountry}</h1>
-      <h2 className="text-2xl font-bold mb-4 text-center">
-        {nameOfCountryLocal}
-      </h2>
-      <img src={flag} className="flex justify-self-center" alt={alt}></img>
-
       {loading && <p className="text-center">Loading...</p>}
       {error && <p className="text-center text-red-500">{error}</p>}
 
       {!loading && !error && (
-        <div className="bg-white shadow-md rounded-xl p-10 my-5 text-xl leading-10 hover:bg-gray-50 transition max-w-md mx-auto">
-          <p>Official Name: {nameOfCountryOfficial}</p>
-          <p>Currency: {currency}</p>
-          <p>Capital: {capital}</p>
-          <p>Official Language: {officialLang}</p>
-          <p>Population: {population}</p>
-          <p>Time zone: {timeZone}</p>
-          <p>Continent: {continent}</p>
+        <div className="bg-white shadow-md rounded-xl p-10 my-5 space-y-4 text-xl  hover:bg-gray-50 transition max-w-xl mx-auto">
+          <h1 className="text-3xl font-bold mb-4 text-center">
+            {nameOfCountry}
+          </h1>
+          <h2 className="text-2xl font-bold mb-4 text-center">
+            {nameOfCountryLocal}
+          </h2>
+          <img
+            src={flag}
+            className="flex justify-self-center mb-10"
+            alt={alt}
+          ></img>
+          <div className="place-self-center space-y-2 tracking-wide py-6">
+            <p>Official Name: {nameOfCountryOfficial}</p>
+            <p>Currency: {currency}</p>
+            <p>Capital: {capital}</p>
+            <p>Official Language: {officialLang}</p>
+            <p>Population: {population}</p>
+            <p>Time zone: {timeZone}</p>
+            <p>Continent: {continent}</p>
+          </div>
         </div>
       )}
       <div className="flex justify-self-center p-4 bg-yellow-400 hover:bg-yellow-200 transition-all rounded-xl py-5 text-2xl">
