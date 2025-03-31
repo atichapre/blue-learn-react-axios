@@ -72,9 +72,11 @@ export function Thailand() {
           </div>
         </div>
       )}
-      <div className="flex justify-self-center p-4 bg-yellow-400 hover:bg-yellow-200 transition-all rounded-xl py-5 text-2xl">
-        <a href={location}>See the location of {nameOfCountry}</a>
-      </div>
+      {!loading && !error && (
+        <div className="flex justify-self-center p-4 bg-yellow-400 hover:bg-yellow-200 transition-all rounded-xl py-5 text-2xl">
+          <a href={location}>See the location of {nameOfCountry}</a>
+        </div>
+      )}
     </div>
   );
 }
